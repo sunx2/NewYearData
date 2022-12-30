@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Christmas</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&amp;display=swap">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: oxanium, sans-serif;
+        }
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+
+        .card {
+            border-radius: 40px;
+            margin: 10px;
+            height: 400px;
+        }
+
+    </style>
+</head>
+
+<body style="background:url(https://t3.ftcdn.net/jpg/02/66/14/92/360_F_266149291_ZUgpRapWW73DZzXKgI5jRgezaOWNnwtC.jpg)">
+    <div class="nav-wrapper">
+        <div class="imgbox"> <img class="center-fit"
+                src="https://media.discordapp.net/attachments/283069244336373761/1056544957395120208/image.png" alt=""
+                srcset=""></div>
+    </div>
+    <div class="row" style="padding-left: 50px; padding-top: 10px; margin-left: 50px; margin-top: 5px;">
+        <div class="col s4">
+            <img style="border-radius: 5px; float: right;" src="{{.PlayerPFP}}" alt="">
+        </div>
+        <div class="col s8">
+            <h3 style="color: white; float: left;">{{.Player}}</h3>
+        </div>
+    </div>
+    <div class="row" style="padding:50px">
+        <div class="col s12" style="align-items: center;">
+            <h1 style="color: blanchedalmond">Your Omega Recap @2022</h1>
+        </div>
+        <div style="align-items: center;" class=" col s4">
+            <div class="card ">
+                <div class="card-image">
+                    <img class="imgx" height="300px" width="200px"
+                        src="https://images.ygoprodeck.com/images/cards_cropped/{{.FavDeckPic}}.jpg"
+                        alt="" srcset="">
+                    <span class="card-title">{{.FavDeck}}</span>
+                </div>
+                <div class="card-content">
+                    <p>Your favorite deck was
+                    <h5><b>{{.FavDeck}}</b></h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="align-items: center;" class="col s4">
+            <div class="card" style="color:white;background:url(https://media.discordapp.net/attachments/283069244336373761/1058476735919820850/pexels-photo-745365.png);">
+                <div class="card-content">
+                    <span class="flow-text">
+                        Your total playtime was <h4><b>{{.TotalTime}}</b></h4>
+                        And you mostly played on <h5><b>{{.FavoriteTime}}</b></h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div style="align-items: center;" class=" col s4">
+            <div class="card ">
+                <div class="card-image">
+                    <img class="imgx" height="300px" width="200px" src="https://images.ygoprodeck.com/images/cards_cropped/{{.FavCardPic}}.jpg"
+                        alt="" srcset="">
+                    <span class="card-title">{{.FavCard}}</span>
+                </div>
+                <div class="card-content">
+                    <p>Your Most Played card was<h5><b>{{.FavCard}}</b></h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12" style="margin:50px ;height: 100px;background-color: inherit;color: white;">
+            <h4 style="text-align: center;">Your Favorite Day to play was <b style="color:green">{{.MostPlayedDay}}</b></h4><br><p style="color: white;text-align: center;">{{.MPmsg}}</h4> <br><br>
+        </div>
+        
+        <div style="align-items: center;" class=" col s4">
+            <div class="card ">
+                <div class="card-image">
+                    <img class="imgx" height="300px" width="200px" src="https://images.ygoprodeck.com/images/cards_cropped/{{.FavSidePic}}.jpg"
+                        alt="" srcset="">
+                    <span class="card-title">{{.FavSide}}</span>
+                </div>
+                <div class="card-content">
+                    <p>Your Most trusted Side card was <h5><b>{{.FavSide}}</b></h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="align-items: center;" class="col s4">
+            <div class="card" style="color:white;background:url(https://media.discordapp.net/attachments/283069244336373761/1058482122534436914/360_F_224627504_kJvlRUr3q48lZhQ0VF4EHTeebzHe67Ph.png);">
+                <div class="card-content">
+                    <span class="flow-text">
+                        Your total played Omega <h4><b style="color: greenyellow;">{{.TotalDays}}</b>/ <b style="color: rebeccapurple;">365</b></b></h4>
+                        days, and we thank 💖 you for that.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div style="align-items: center;" class=" col s4">
+            <div class="card ">
+                <div class="card-image">
+                    <img class="imgx" height="300px" width="200px" src="{{.EnemyPFP}}"
+                        alt="" srcset="">
+                    <span class="card-title">{{.Enemy}}</span>
+                </div>
+                <div class="card-content">
+                    <p>Your Most Played Opponent was
+                    <h5><b>{{.Enemy}}</b></h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12" style="margin:50px ;height: 100px;background-color: inherit;color: white;">
+            <h4 style="text-align: center;">Maybe you have played even more casual duels but...</h4>
+        </div>
+
+        <div style="align-items: center;" class="col s4">
+            <div class="card" style=" background-repeat : no-repeat; background-size: contain; color:white;background:url(https://media.discordapp.net/attachments/283069244336373761/1058484522934607984/image.png);">
+                <div class="card-content">
+                    <span class="flow-text" style="color:black">
+                        You Played <h5><b>{{.TotalGame}}</b></h5> games and won <b>{{.Wins}}</b>! 
+                        Thats .. <h3><b style="color: red">{{.Winrate}}%</b></h3> Winrate. 
+                        {{.Winratemsg}}.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div style="align-items: center;" class="col s8">
+            <div class="card" style=" background-repeat : no-repeat; background-size: contain; color:white;background:url(https://t4.ftcdn.net/jpg/03/39/29/41/360_F_339294165_OeMlp1CVxGciUt6SMUaI2tebk7DZUfui.jpg);">
+                <div class="card-content">
+                    <span class="flow-text" style="color:black">
+                        Thanks for enjoying Omega ranked @2022 , see you next year!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
